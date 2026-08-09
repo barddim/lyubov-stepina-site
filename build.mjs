@@ -24,6 +24,7 @@ const assets = [
 for (const asset of assets) {
   await cp(join(root, asset), join(client, asset));
 }
+await cp(join(root, 'assets'), join(client, 'assets'), { recursive: true });
 
 await writeFile(join(server, 'index.js'), `
 export default {

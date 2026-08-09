@@ -37,9 +37,64 @@ function OrbitalField({ reducedMotion }) {
   );
 }
 
+function StoryAndProof() {
+  const reviewImages = [
+    'review-01.png', 'review-02.png', 'review-03.png', 'review-04.png',
+    'review-05.png', 'review-07.png', 'review-08.png', 'review-09.png',
+    'review-10.png', 'review-11.png'
+  ];
+  const certificates = Array.from({ length: 12 }, (_, index) => `certificate-${String(index + 1).padStart(2, '0')}.png`);
+
+  return (
+    <>
+      <section className="site-section story-section reveal" id="story">
+        <div className="story-grid">
+          <div className="story-copy reveal">
+            <div className="section-kicker">Личный путь</div>
+            <h2>Я пришла сюда<br /><em>через шторм.</em></h2>
+            <p className="story-lead">Я мама троих детей. Один из них — ребёнок с инвалидностью. Я знаю, что такое жить, когда привычные опоры рушатся, а врачи разводят руками.</p>
+            <p>Я не пришла в эту работу через теорию. Я пришла через личный ад — и через выход из него.</p>
+            <p>Я не утешаю и не обещаю «света». Я помогаю вернуть землю под ногами и поставить всё на свои места.</p>
+            <div className="story-signature">Любовь Стёпина <span>проводник к внутренней опоре</span></div>
+          </div>
+          <figure className="story-portrait reveal"><img src="./assets/lyuba-portrait-03.png" alt="Любовь Стёпина на природе" /><div className="story-photo-strip"><img src="./assets/lyuba-portrait-02.png" alt="Любовь Стёпина в лесу" /><img src="./assets/lyuba-portrait-06.png" alt="Любовь Стёпина у маяка" /></div><figcaption>Не искать готовый ответ.<br />Встретиться с собой.</figcaption></figure>
+        </div>
+      </section>
+
+      <section className="site-section prashna-section reveal" id="prashna">
+        <div className="prashna-grid">
+          <div className="prashna-copy reveal">
+            <div className="section-kicker">Бесплатный первый шаг</div>
+            <h2>Задайте вопрос.<br /><em>Получите ясность.</em></h2>
+            <p>В Telegram-боте можно бесплатно получить лёгкий разбор Прашны — астрологии вопроса. Спросите о том, что волнует прямо сейчас, и посмотрите, куда направить внимание.</p>
+            <a className="cta cta-light" href="https://t.me/vedyprashna_bot" target="_blank" rel="noreferrer"><span>Открыть Прашна-бота</span><b>↗</b></a>
+          </div>
+          <div className="prashna-video-wrap reveal"><video controls playsInline preload="metadata" poster="./assets/hero-concept.png"><source src="./assets/prashna-video.mp4" type="video/mp4" /></video><span>О Прашне — коротко от Любы</span><a href="https://vk.ru/astrospez" target="_blank" rel="noreferrer">Посмотреть видео во ВКонтакте ↗</a></div>
+        </div>
+      </section>
+
+      <section className="site-section certificates-section reveal" id="certificates">
+        <div className="section-heading reveal"><div className="section-kicker">Обучение и опыт</div><h2>Знания, которые<br /><em>стали практикой.</em></h2></div>
+        <p className="certificates-intro reveal">Ведическая астрология, Джйотиш, Прашна, родовые задачи и Кундалини Рейки — направления, в которых Любовь продолжает учиться и работать с людьми.</p>
+        <div className="certificate-grid">{certificates.map((src, index) => <figure className="certificate-card reveal" style={{ '--reveal-delay': `${index * 70}ms` }} key={src}><img src={`./assets/${src}`} alt={`Сертификат Любовь Стёпиной ${index + 1}`} /></figure>)}</div>
+      </section>
+
+    </>
+  );
+}
+
+function RealReviews() {
+  const reviewImages = ['review-01.png', 'review-02.png', 'review-03.png', 'review-04.png', 'review-05.png', 'review-07.png', 'review-08.png', 'review-09.png', 'review-10.png', 'review-11.png'];
+  return <section className="site-section screenshot-reviews-section reveal" id="reviews">
+    <div className="section-heading reveal"><div className="section-kicker">Настоящие слова</div><h2>Не обещания.<br /><em>Опыт людей.</em></h2></div>
+    <p className="reviews-intro reveal">Любовь получила разрешение публиковать эти отзывы. Здесь они остались в своём живом виде — со словами, эмоциями и голосом тех, кто уже прошёл свой путь.</p>
+    <div className="review-screenshot-grid">{reviewImages.map((src, index) => <figure className="review-screenshot reveal" style={{ '--reveal-delay': `${(index % 5) * 70}ms` }} key={src}><img src={`./assets/${src}`} alt="Отзыв клиента" loading="lazy" /></figure>)}</div>
+  </section>;
+}
+
 function LandingSections() {
   const services = [
-    { number: '01', title: 'Ведическая астрология', text: 'Натальная карта, прогнозы, Прашна и ректификация — чтобы увидеть свои опоры и следующий шаг.', price: 'от 1 500 ₽', details: ['Натальная карта — 4 000 ₽', 'Годовой прогноз — 6 500 ₽', 'Прашна — 1 600 ₽', 'Совместимость — 4 000 ₽'] },
+    { number: '01', title: 'Ведическая астрология', text: 'Натальная карта, прогнозы, Прашна и ректификация — чтобы увидеть свои опоры и следующий шаг.', price: 'от 300 ₽', details: ['Натальная карта — 4 000 ₽', 'Годовой прогноз — 6 500 ₽', 'Прашна — 1 600 ₽', 'Совместимость — 2 500 ₽', 'Ректификация — 4 000 ₽'] },
     { number: '02', title: 'Регрессия', text: 'Мягкая встреча с глубинной историей, чувствами и повторяющимися сценариями. Не чинить себя — вернуть себя.', price: '3 000 ₽', details: ['Индивидуальная сессия', 'Продолжительность — около 2 часов', 'Запись встречи остаётся у вас'] },
     { number: '03', title: 'Системные расстановки', text: 'Посмотреть на отношения, родовые связи и внутренние конфликты так, чтобы в системе снова появилось движение.', price: '5 000 ₽', details: ['Индивидуальная работа', 'Отношения и семейные сценарии', 'Родовые и повторяющиеся темы'] },
     { number: '04', title: 'Кундалини Рейки', text: 'Бережная работа с состоянием, энергией и ощущением внутреннего ресурса.', price: 'от 1 300 ₽', details: ['Один сеанс — 1 300 ₽', 'Обучение на Мастера — 23 000 ₽', 'Сопровождение на месяц — 14 990 ₽'] },
@@ -52,7 +107,8 @@ function LandingSections() {
   ];
 
   return (
-    <>
+    <div className="site-flow">
+      <StoryAndProof />
       <section className="site-section philosophy-section reveal" id="about">
         <div className="section-kicker reveal">О подходе</div>
         <div className="philosophy-grid reveal">
@@ -84,6 +140,8 @@ function LandingSections() {
         <div className="service-note">Также доступны годовой прогноз, совместимость партнёров, обучение Кундалини Рейки и сопровождение на месяц.</div>
       </section>
 
+      <RealReviews />
+
       <section className="site-section process-section reveal">
         <div className="section-kicker">Как это происходит</div>
         <div className="process-grid">
@@ -91,22 +149,16 @@ function LandingSections() {
           <div className="reveal" style={{ '--reveal-delay': '170ms' }}><span>02</span><h3>Посмотреть глубже</h3><p>Мы находим связь между тем, что происходит, и тем, что удерживает движение.</p></div>
           <div className="reveal" style={{ '--reveal-delay': '260ms' }}><span>03</span><h3>Выбрать иначе</h3><p>Не из страха и долга, а из ясности, опоры и живого отклика внутри.</p></div>
         </div>
-      </section>
-
-      <section className="site-section testimonials-section reveal" id="reviews">
-        <div className="section-kicker">Слова после встречи</div>
-        <div className="testimonial-grid">
-          {testimonials.map((quote, index) => <blockquote className="reveal" style={{ '--reveal-delay': `${index * 100}ms` }} key={index}><span>“</span><p>{quote}</p><footer>отзыв клиента</footer></blockquote>)}
-        </div>
+        <div className="process-visual" aria-label="Схема пути клиента"><div className="process-line" /><div className="process-node"><b>01</b><span>Запрос</span></div><div className="process-node"><b>02</b><span>Встреча</span></div><div className="process-node"><b>03</b><span>Выбор</span></div><div className="process-glow" /></div>
       </section>
 
       <section className="final-cta reveal" id="contact">
         <div className="section-kicker">Если чувствуете отклик</div>
         <h2>Там, где начинается<br /><em>ваш выбор.</em></h2>
-        <p>Напишите Любови в Telegram — вместе выберете подходящий формат работы.</p>
+        <p>Напишите Любе в Telegram — вместе выберете подходящий формат работы.</p>
         <div className="contact-actions"><a className="cta cta-light" href="https://t.me/LubaStepAstro" target="_blank" rel="noreferrer"><span>Написать Любе</span><b>↗</b></a><a className="contact-link" href="https://vk.ru/astrospez" target="_blank" rel="noreferrer">ВКонтакте <span>↗</span></a></div>
       </section>
-    </>
+    </div>
   );
 }
 
