@@ -87,12 +87,12 @@ h1 em { color: #e5bf88; font-weight: 500; }
 .site-flow { display: flex; flex-direction: column; }
 .site-flow #story { order: 1; }
 .site-flow #prashna { order: 2; }
-.site-flow #reviews { order: 3; }
+.site-flow #reviews { order: 8; }
 .site-flow #certificates { order: 4; }
 .site-flow #about { order: 5; }
 .site-flow .process-section { order: 6; }
 .site-flow #services { order: 7; }
-.site-flow #contact { order: 8; }
+.site-flow #contact { order: 9; }
 .site-section::before, .final-cta::before { content: ''; position: absolute; left: 50%; top: -1px; width: min(42vw, 560px); height: 1px; transform: translateX(-50%); background: linear-gradient(90deg, transparent, rgba(185,145,112,.46), transparent); }
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .85s ease, transform .85s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
 .reveal.is-visible { opacity: 1; transform: none; }
