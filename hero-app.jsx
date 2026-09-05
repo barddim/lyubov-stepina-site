@@ -69,7 +69,7 @@ function StoryAndProof() {
             <p>В Telegram-боте можно бесплатно получить лёгкий разбор Прашны — астрологии вопроса. Спросите о том, что волнует прямо сейчас, и посмотрите, куда направить внимание.</p>
             <a className="cta cta-light" href="https://t.me/vedyprashna_bot" target="_blank" rel="noreferrer"><span>Открыть Прашна-бота</span><b>↗</b></a>
           </div>
-          <div className="prashna-video-wrap reveal"><video controls playsInline preload="metadata" poster="./assets/hero-concept.png"><source src="./assets/prashna-video.mp4" type="video/mp4" /></video><span>О Прашне — коротко от Любы</span><a href="https://vk.ru/astrospez" target="_blank" rel="noreferrer">Посмотреть видео во ВКонтакте ↗</a></div>
+          <div className="prashna-video-wrap reveal"><video controls playsInline preload="metadata"><source src="./assets/prashna-video.mp4" type="video/mp4" /></video><span>О Прашне — коротко от Любы</span><a href="https://vk.ru/astrospez" target="_blank" rel="noreferrer">Группа Любы во ВКонтакте ↗</a></div>
         </div>
       </section>
 
@@ -101,7 +101,7 @@ function LandingSections() {
     { number: '05', title: 'Системные расстановки', text: 'Посмотреть на отношения, родовые связи и внутренние конфликты так, чтобы в системе снова появилось движение.', price: '5 000 ₽', details: ['Индивидуальная работа', 'Отношения и семейные сценарии', 'Родовые и повторяющиеся темы'] },
     { number: '06', title: 'Регрессия', text: 'Мягкая встреча с глубинной историей, чувствами и повторяющимися сценариями. Не чинить себя — вернуть себя.', price: '3 000 ₽', details: ['Индивидуальная сессия', 'Продолжительность — около 2 часов', 'Запись встречи останется у вас'] },
     { number: '07', title: 'Кундалини Рейки', text: 'Бережная работа с состоянием, энергией и ощущением внутреннего ресурса.', price: '1 300 ₽', details: ['Один сеанс', 'Очищение и восполнение сил'] },
-    { number: '08', title: 'Обучение и сопровождение', text: 'Глубокий формат для тех, кто хочет идти дольше и системнее — с практикой, поддержкой и личным темпом.', price: 'от 14 990 ₽', details: ['Мастер Кундалини Рейки — 23 000 ₽', 'Месячное сопровождение — 14 990 ₽', '4 регрессии + 8 сеансов Рейки'] },
+    { number: '08', title: 'Мастер Кундалини Рейки', text: 'Обучение Кундалини Рейки.', price: '23 000 ₽', details: [] },
   ];
 
   const testimonials = [
@@ -141,7 +141,7 @@ function LandingSections() {
             </article>
           ))}
         </div>
-        <div className="service-note">Также доступны годовой прогноз, совместимость партнёров, обучение Кундалини Рейки и сопровождение на месяц.</div>
+        <div className="service-note">Также доступны годовой прогноз, совместимость партнёров и обучение Кундалини Рейки.</div>
       </section>
 
       <RealReviews />
