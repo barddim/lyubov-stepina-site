@@ -1,0 +1,53 @@
+/* Approved refinements: same site font families, lighter journey diagram. */
+.hero.refined-hero .hero-copy > .cta {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: #f4dfba;
+  gap: 0;
+}
+.hero.refined-hero .hero-copy > .cta > span { max-width: 124px; }
+.hero.refined-hero .hero-copy > .cta > b { display: none; }
+.hero.refined-hero .choice-map {
+  width: 360px;
+  max-width: calc(100% - 48px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.hero.refined-hero .choice-map::before { display: none; }
+.hero.refined-hero .choice-map-subtitle { display: none; }
+.hero.refined-hero .choice-map .map-node {
+  width: 68px;
+  height: 68px;
+  font-size: 14px;
+  background: rgba(20, 30, 49, .72);
+  border-color: rgba(225, 196, 151, .65);
+  color: #fff4e1;
+  text-shadow: 0 1px 4px #0a1329;
+  box-shadow: none;
+}
+.hero.refined-hero .choice-map li:last-child .map-node { box-shadow: none; border-color: #d8b988; }
+.hero.refined-hero .choice-map .map-caption {
+  max-width: 112px;
+  margin-top: 10px;
+  color: #ebe8e2;
+  text-shadow: 0 1px 4px #091126, 0 0 10px #091126;
+}
+.hero.refined-hero .choice-map li:nth-child(1) { padding-top: 18px; }
+.hero.refined-hero .choice-map li:nth-child(2) { padding-top: 40px; }
+.hero.refined-hero .choice-map li:nth-child(3) { padding-top: 0; }
+@media (max-width: 760px) {
+  .hero.refined-hero .choice-map {
+    width: calc(100% - 48px);
+    max-width: 360px;
+    margin: 0 24px 90px;
+  }
+  .hero.refined-hero .choice-map .map-node { width: 64px; height: 64px; }
+}

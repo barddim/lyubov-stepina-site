@@ -14,6 +14,7 @@ await mkdir(server, { recursive: true });
 const assets = [
   'index.html',
   'hero.css',
+  'hero-refinements.css',
   'hero-app.jsx',
   'three-layer.js',
   'hero-concept.png',
